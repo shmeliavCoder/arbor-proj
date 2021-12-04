@@ -19,7 +19,10 @@ const FileUploadPage = () => {
         formData.append('File', selectedFile);
         formData.append('DateTime', dateToShow);
 
-        axios.post('http://localhost:5000/uploadFile', formData, {
+
+        // http://localhost:5000/uploadFile
+        // axios.post('http://localhost:5000/uploadFile', formData, {
+        axios.post('https://node-server-brhvcistxq-lz.a.run.app/uploadFile', formData, {
             headers: {
                 "Content-Type": "multipart/form-data",
             },
